@@ -11,12 +11,11 @@ defmodule Mix.Tasks.D01.P1 do
       do: Benchee.run(%{part_1: fn -> input |> part1() end}),
       else:
         input
-        |> part2()
-        |> IO.inspect(label: "Part 2 Results")
+        |> part1()
+        |> IO.inspect(label: "Part 1 Results")
   end
 
   defp input() do
     File.read!("inputs/input1.txt")
-    #|> String.split(["\n", "\r", "\r\n"], trim: true)
   end
 end
